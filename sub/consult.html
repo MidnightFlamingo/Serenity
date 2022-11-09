@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> Book Consultation </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+h1 {
+  font-family: Cursive, Helvetica, sans-serif;
+}
+
+div.center {
+  text-align: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top:0;
+  width:100%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  top: 50%;
+  left: 50%;
+}
+
+.topnav a:hover {
+  background-color: lightpink;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: lightblue;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+ .button {
+  background-color: pink; /* Light Pink */
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+  .button1 {border-radius: 12px;}
+
+  * {
+  box-sizing: border-box;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+
+img{
+width: 12%;
+  height: 12%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+img:hover {
+  animation-iteration-count: infinite;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid lightblue;
+  border-radius: 4px;
+}
+
+input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid lightblue;
+  border-radius: 4px;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: lightblue;
+}
+
+input[type=submit] {
+  background-color: lightblue;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: lightpink;
+}
+
+input[type=reset] {
+  background-color: lightpink;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: lightblue;
+}
+
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+</style>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+function doClear()
+{
+document.ConsultationForm.name.value="";
+document.ConsultationForm.email.value="";
+document.ConsultationForm.value="";
+
+document.AdoptionApplicationForm.answer1[0].checked=false;
+document.AdoptionApplicationForm.answer1[1].checked=false;
+}
+
+function myFunction()
+{
+alert("Great! I can't wait to help you make your event a sucess.");
+}
+</script>
+
+</head>
+
+<body>
+<div class="topnav" id="myTopnav">
+  <img src = "../img/serenity.png" alt = "Serenity logo">
+  <a href="../index.html">Home</a>
+  <a href="./services.html">Services</a>
+  <a href="./aboutus.html">About Us</a>
+  <a href="./consult.html" class="active">Book Consultation</a>
+  <a href="./gallery.html" > Gallery </a>
+  </div>
+</div>
+
+<br> <br> <br> <br>
+<div class="main">
+
+<div class="container">
+<div class = "center">
+<h1> Book Consultation </h1>
+<p style = "color : #008CBA;"> <b> Please Complete The Form Below And Submit </b> </p>
+</div>
+<hr>
+<table align = "center">
+<tr>
+<td>
+<form name = "ConsultationForm">
+<form action = "/action_page.php" onsubmit = "myFunction()">
+<label for = "name"> <b> What Is Your Name? </b> </label>
+</td>
+<td>
+<input type = "text" id = "name" name = "firstname" placeholder = "Name"required> 
+</td>
+</tr>
+
+<tr>
+<td>
+<label for = "email"> <b> What Is Your Email Address? <b> </label>
+</td>
+<td>
+<input type = "text" id = "mail" name = "email" placeholder = "E-mail" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for = "phone"> <b> What Is Your Phone Number? </b> </label>
+</td>
+<td>
+<input type = "tel" id = "phone" name = "phone" placeholder = "012-456-7890" = pattern = "[0][0-9]{2}-[0-9]{3}-[0-9]{4}" 
+required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for = "event"> <b> What Kind Of Event Are You Hosting? </b> </label>
+</td>
+<td>
+<select id = "eventname" name = "eventname">
+<optgroup label = "Event">
+<option value = "wedding">  Wedding  </option>
+<option value = "engagement">  Engagement Party  </option>
+<option value = "birthday">  Birthday Party  </option>
+<option value = "anniversary"> Anniversary Party  </option>
+<option value = "baby"> Baby Shower  </option>
+<option value = "other"> Other  </option>
+</optgroup>
+</select>
+<input type = "text" id = "other" name = "other" placeholder = "Specify Other">
+</td>
+</tr>
+
+<tr>
+<td>
+<label for = "venue"> <b> Have You Booked Or Selected A Venue Yet? <b> </label>
+</td>
+<td>
+<input name="answer1" type="radio" checked>Yes 
+<input name="answer1" type="radio" checked> No
+</td>
+</tr>
+
+<tr>
+<td>
+<label for = "help"> <b> How Can We Help? </b> </label>
+</td>
+<td>
+<select id = "helpname" name = "helpname">
+<optgroup label = "">
+<option value = "ideas"> Ideas And Suggestions </option>
+<option value = "theme"> Theme And Decorations </option>
+<option value = "hiring"> Hiring Of Decor </option>
+<option value = "package"> The Full Package </option>
+</optgroup>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="submit" value="Submit">
+</td>
+<td>
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+<br>
+
+<footer>
+	<p style="font-size:20px;">Serenity 2022<p>
+	<p><i class="fa fa-envelope" style="font-size:20px;color:lightblue">thomasonsupplies@gmail.com </i>
+		<i class="fa fa-phone" style="font-size:20px;color:lightpink">074 603 9346</i> </p>
+</footer>
+
+</body>
+</html>
